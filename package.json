@@ -3,14 +3,27 @@
   "version": "1.0.0",
   "description": "[Teamfight Tactics](https://teamfighttactics.leagueoflegends.com/en-us/) (TFT) ) is an auto-battler free-for-all game renowned for its depth of strategy. As a tactician, your role is pivotal in assembling a formidable team amidst the unpredictability of chance. Utilizing your gold, you strategically acquire champions, craft items, and tactically position your formidable roster on the board to engage other tacticians in fierce battles.",
   "main": "index.js",
+  "browserslist": [
+    "defaults"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack --watch --mode=development"
+    "start": "webpack --watch --mode=development",
+    "build": "webpack --mode=production"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@babel/core": "^7.24.0",
+    "@babel/preset-env": "^7.24.0",
+    "babel-loader": "^9.1.3",
+    "core-js": "^3.36.0",
+    "css-loader": "^6.10.0",
+    "mini-css-extract-plugin": "^2.8.1",
+    "regenerator-runtime": "^0.14.1",
+    "sass": "^1.71.1",
+    "sass-loader": "^14.1.1",
     "webpack": "^5.90.3",
     "webpack-cli": "^5.1.4"
   }
