@@ -1,0 +1,17 @@
+{
+  "name": "tacticians_nexus",
+  "version": "1.0.0",
+  "description": "[Teamfight Tactics](https://teamfighttactics.leagueoflegends.com/en-us/) (TFT) ) is an auto-battler free-for-all game renowned for its depth of strategy. As a tactician, your role is pivotal in assembling a formidable team amidst the unpredictability of chance. Utilizing your gold, you strategically acquire champions, craft items, and tactically position your formidable roster on the board to engage other tacticians in fierce battles.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack --watch --mode=development"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "webpack": "^5.90.3",
+    "webpack-cli": "^5.1.4"
+  }
+}
