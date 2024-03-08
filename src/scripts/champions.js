@@ -40,16 +40,13 @@ export function fetchChampionInfo() {
                     
                     
                     champions.forEach(champObj => {
+                        console.log(champObj)
                         const champContainer = document.createElement('div');
                         const champName = document.createElement('div');
                         const champTraits = document.createElement('div');
                         const champCost = document.createElement('div');
+                        const champImgLink = document.createElement('a');
                         const champImg = document.createElement('img');
-
-                        
-                        champContainer.id = champObj['name'];
-                        champName.id = champObj['name'];
-                        champName.innerText = champObj['name'];
 
                         champTraits.id = 'traits';
                         for (let trait of champObj['traits']) {
@@ -59,13 +56,44 @@ export function fetchChampionInfo() {
                             subTrait.src = './assets/images/trait-icons/' + `${traitText.toLowerCase()}.png`;
                             champTraits.appendChild(subTrait);
                         }
+                
+                        // Due to the fact that there is ONLY one pair of dupes this set, 
+                        // conditionals need to be made todifferentiate between the two.
+                        const currentTraits = champTraits.getElementsByTagName('img');
+                        for (let i = 0; i < currentTraits.length; i++) {
+                            const img = currentTraits[i];
+                            if (img.id.includes('KDA') && champObj['name'] === 'Akali') {
+                                champContainer.id = 'Akali_KDA';
+                                champName.id = 'Akali_KDA';
+                                champName.innerText = 'Akali (KDA)';
+                                break;
+                            } else if ((img.id.includes('True Damage') && champObj['name'] === 'Akali')) {
+                                champContainer.id = 'Akali_TD';
+                                champName.id = 'Akali_TD';
+                                champName.innerText = 'Akali (True Damage)';
+                                break;
+                            } else {
+                                champContainer.id = champObj['name'];
+                                champName.id = champObj['name'];
+                                champName.innerText = champObj['name'];
+                            }
+                        }
 
                         champCost.id = `${champObj['cost']}_cost`;
                         champCost.innerText = champObj['cost'];
 
-                        champImg.id = 'img';
-                        champImg.src = '';
+                        champImgLink.id = 'splash';
+                        if (champObj['apiName'].includes('TrueDamage')) {
+                            champImgLink.href = 'https://mobalytics.gg/tft/champions/akali-true-damage'    
+                        } else {
+                            champImgLink.href = 'https://mobalytics.gg/tft/champions/' + `${champObj['name'].toLowerCase()}`
+                        }
 
+                        champImg.id = 'img';
+                        champImg.src = './assets/images/splashes/' + `${champName.id}.jpg`;
+
+                        champImgLink.appendChild(champImg);
+                        champContainer.appendChild(champImgLink);
                         champContainer.appendChild(champName);
                         champContainer.appendChild(champTraits);
                         champContainer.appendChild(champCost);
