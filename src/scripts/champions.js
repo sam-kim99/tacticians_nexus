@@ -33,8 +33,10 @@ export function fetchChampionInfo() {
 
                     const costContainer = document.createElement('div');
                     costContainer.classList.add(`${cost}-cost`);
-                    const containterText = document.createElement('h2')
 
+                    const containterText = document.createElement('h2')
+                    containterText.innerText = `${cost} Cost`;
+                    parentChamp.appendChild(containterText);
                     
                     
                     champions.forEach(champObj => {
@@ -44,8 +46,7 @@ export function fetchChampionInfo() {
                         const champCost = document.createElement('div');
                         const champImg = document.createElement('img');
 
-                        containterText.innerText = `${cost} Cost`;
-
+                        
                         champContainer.id = champObj['name'];
                         champName.id = champObj['name'];
                         champName.innerText = champObj['name'];
@@ -73,7 +74,6 @@ export function fetchChampionInfo() {
                         costContainer.appendChild(champContainer);
                     });
                     
-                    parentChamp.appendChild(containterText);
                     parentChamp.appendChild(costContainer);
                 }
             }
