@@ -1,3 +1,7 @@
 import { fetchChampionInfo } from "./scripts/champions";
+import { originTraits, test } from "./scripts/traits";
 
-fetchChampionInfo();
+document.addEventListener('DOMContentLoaded', function() {
+    fetchChampionInfo();
+    test(originTraits);
+});

@@ -13,7 +13,7 @@ export async function fetchChampionInfo() {
 }
 
 function displayChampionInfo(champInfo) {
-    const parentChamp = document.querySelector('.champions');
+    const champDiv = document.querySelector('.champions');
     // This is necessary because the JSON file is unorganized.
     const champData = champInfo['setData'][4];
     const championsByCost = {
@@ -39,9 +39,9 @@ function displayChampionInfo(champInfo) {
 
             const containerText = document.createElement('h2');
             containerText.innerText = `${cost}-cost`;
-            parentChamp.appendChild(containerText);
+            champDiv.appendChild(containerText);
 
-            parentChamp.appendChild(costContainer);
+            champDiv.appendChild(costContainer);
             champions.forEach(champObj => {
                 const champContainer = createChampionContainer(champObj);
                 costContainer.appendChild(champContainer);
