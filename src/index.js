@@ -1,7 +1,8 @@
 import { fetchChampionInfo } from "./scripts/champions";
-import { originTraits, test } from "./scripts/traits";
+import { originTraits, createTraits, classTraits } from "./scripts/traits";
 
 document.addEventListener('DOMContentLoaded', function() {
     fetchChampionInfo();
-    test(originTraits);
+    createTraits(originTraits);
+    createTraits(classTraits);
 });
