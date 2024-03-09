@@ -150,13 +150,23 @@ export const classTraits = {
 }
 
 export function createTraits(traitObject) {
+    const traitsDiv = document.querySelector('.traits');
+    const subTraitName = typeTrait(traitObject);
+
+    const typeTraitDiv = document.createElement('div');
+    const traitTitle = document.createElement('h2');
+    traitTitle.innerText = subTraitName;
+    traitsDiv.appendChild(traitTitle);
+    traitsDiv.appendChild(typeTraitDiv)
+    
     for (let currentTrait in traitObject) {
-        const traitsDiv = document.querySelector('.traits');
+        
         const currentTraitDiv = document.createElement('div');
         const traitImgDiv = document.createElement('div');
         const traitImg = document.createElement('img');
         const traitName = document.createElement('h2');
         const traitDesc = document.createElement('div');
+        
 
         currentTraitDiv.id = currentTrait;
     
@@ -172,7 +182,16 @@ export function createTraits(traitObject) {
         traitDesc.innerHTML = traitObject[currentTrait]['desc'];
         currentTraitDiv.appendChild(traitDesc);
 
-        traitsDiv.appendChild(currentTraitDiv);
+        typeTraitDiv.appendChild(currentTraitDiv);
     }
 
+}
+
+function typeTrait(traitObject) {
+    const traitDiff = Object.keys(traitObject);
+    if (traitDiff.length === 16) {
+        return 'Origin Traits'
+    } else {
+        return 'Class Traits'
+    }
 }
