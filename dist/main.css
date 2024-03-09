@@ -26,6 +26,22 @@ h2 {
   max-width: 960px;
 }
 
+.traits {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  max-width: 1200px;
+  height: 3000px;
+  gap: 10px;
+  overflow: auto;
+  border: 10px solid white;
+}
+
+.traits > div {
+  max-width: 300px;
+  overflow: auto;
+  background-color: orange;
+}
+
 .champions > div {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
