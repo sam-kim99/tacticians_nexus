@@ -156,27 +156,31 @@ export function createTraits(traitObject) {
     const typeTraitDiv = document.createElement('div');
     const traitTitle = document.createElement('h2');
     traitTitle.innerText = subTraitName;
+    typeTraitDiv.id = subTraitName;
     traitsDiv.appendChild(traitTitle);
-    traitsDiv.appendChild(typeTraitDiv)
+    traitsDiv.appendChild(typeTraitDiv);
     
     for (let currentTrait in traitObject) {
         
         const currentTraitDiv = document.createElement('div');
         const traitImgDiv = document.createElement('div');
         const traitImg = document.createElement('img');
+        const traitNameDiv = document.createElement('div');
         const traitName = document.createElement('h2');
         const traitDesc = document.createElement('div');
         
 
         currentTraitDiv.id = currentTrait;
     
+        traitImgDiv.id = 'traitImg'
         traitImg.src = './assets/images/trait-icons/' + currentTrait + '.png';
         traitImgDiv.appendChild(traitImg);
         currentTraitDiv.appendChild(traitImgDiv);
 
-        traitName.id = 'traitName';
+        traitNameDiv.id = 'traitName';
         traitName.innerText = traitObject[currentTrait]['name'];
-        currentTraitDiv.appendChild(traitName);
+        traitNameDiv.appendChild(traitName);
+        currentTraitDiv.appendChild(traitNameDiv);
 
         traitDesc.id = 'traitDesc';
         traitDesc.innerHTML = traitObject[currentTrait]['desc'];
@@ -188,10 +192,13 @@ export function createTraits(traitObject) {
 }
 
 function typeTrait(traitObject) {
-    const traitDiff = Object.keys(traitObject);
-    if (traitDiff.length === 16) {
+    if (traitObject === originTraits) {
         return 'Origin Traits'
     } else {
         return 'Class Traits'
     }
+}
+
+function populateTraitChampions() {
+    
 }

@@ -104,7 +104,7 @@ function createChampionContainer(champObj) {
     // Link each champion's image to their own page
     // Edge case in conditional due to the fact that this set has one pair of dupes
     champImgLink.id = 'splash';
-    champImgLink.target = '_blank';
+    champImgLink.target = '_blank'; // Opens in new tab
     if (champObj['apiName'].includes('TrueDamage')) {
         champImgLink.href = 'https://mobalytics.gg/tft/champions/akali-true-damage'    
     } else {

@@ -54,3 +54,8 @@ a img {
     width: 300px;
     height: auto;
 }
+
+.banner > img {
+    background: linear-gradient(180deg, transparent 90%, #161618 100%);
+    background-size: contain;
+}
