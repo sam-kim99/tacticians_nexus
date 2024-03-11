@@ -16,6 +16,7 @@ function displayChampionInfo(champInfo) {
     const champDiv = document.querySelector('.champions');
     // This is necessary because the JSON file is unorganized.
     const champData = champInfo['setData'][4];
+    console.log(champData)
     const championsByCost = {
         1: [],
         2: [],
