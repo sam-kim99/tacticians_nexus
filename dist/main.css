@@ -48,6 +48,5 @@ a img {
 }
 
 .banner > img {
-  background: linear-gradient(180deg, transparent 90%, #161618 100%);
-  background-size: contain;
+  width: 1000px;
 }
