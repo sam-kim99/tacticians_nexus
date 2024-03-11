@@ -16,7 +16,7 @@ export const originTraits = {
     },
     'edm': {
         'name': 'EDM',
-        'desc': "<p>Use the EDM selector item to choose an EDM champion and see the frequency for each.<br><br>At the selected champions\'s frequency, your EDM champions cast the selected Ability with modified effectiveness.<br><br>(2) 90% effectiveness<br>(3) 110% effectiveness<br>(4) 120% effectiveness, -1 second<br>(5) 135% effectiveness, -1 seconds</p><br>",
+        'desc': "<p>Use the EDM selector item to choose an EDM champion and see the frequency for each.<br><br>At the selected champions\'s frequency, your EDM champions cast the selected Ability with modified effectiveness.<br><br>(2) 90% effectiveness<br>(3) 110% effectiveness<br>(4) 120% effectiveness, -1 second<br>(5) 135% effectiveness, -1 second</p><br>",
         'champions': ['Jax', 'Lux', 'Zed', 'Zac'] 
     },
     'emo': {
