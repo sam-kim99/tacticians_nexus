@@ -55,6 +55,6 @@ a img {
   height: 64px;
 }
 
-#final-board > div > div > div > img {
+.square-splash > img {
   height: 64px;
 }

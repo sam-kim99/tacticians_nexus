@@ -7,12 +7,12 @@ export const originTraits = {
     'country': {
         'name': 'Country',
         'desc': "<p>When your team loses 30% of their Health, a Dreadsteed that empowers your team. Each Country star level increases the Dreadsteed\'s Health and Attack Damage.<br><br>(3) Dreadsteed<br>(5) Midnight Dreadsteed<br>(7) Infernal Invocation Dreadsteed<p><br>",
-        'champions': ['Tahm Kench', 'Katarina', 'Samira', 'Urgot', 'Thresh']
+        'champions': ['TahmKench', 'Katarina', 'Samira', 'Urgot', 'Thresh']
     },
     'disco': {
         'name': 'Disco',
         'desc': "<p>Summon a movable Disco Ball.<br><br>Combat start: Allies next to it gain Attack Speed and healing immediately and every 3 seconds.<br><br>(3) 5% Attack Speed, 2% max Health<br>(4) 8% Attack Speed, 3% max Health<br>(5) 2 Disco Balls, 12% Attack Speed, 3% max Health<br>(6) 20% Attack Speed, 4% max Health</p><br>",
-        'champions': ['Nami', 'Taric', 'Gragas', 'Blitzcrank', 'Twisted Fate']
+        'champions': ['Nami', 'Taric', 'Gragas', 'Blitzcrank', 'TwistedFate']
     },
     'edm': {
         'name': 'EDM',
@@ -27,7 +27,7 @@ export const originTraits = {
     'heartsteel': {
         'name': 'Heartsteel',
         'desc': "<p>Earn Hearts by killing enemies. Gain even more by losing player combat. Every 4 player combats, convert Hearts into powerful rewards!<br><br>(3) 1x Hearts<br>(5) 2x Hearts<br>(7) 5.5x Hearts<br>(10) 18x Hearts, Gain rewards every round and keep 80% of you Hearts!</p><br>",
-        'champions': ['K\'Sante', 'Aphelios', 'Sett', 'Yone', 'Ezreal', 'Kayn']
+        'champions': ['KSante', 'Aphelios', 'Sett', 'Yone', 'Ezreal', 'Kayn']
     },
     'hyperpop': {
         'name': 'Hyperpop',
@@ -42,12 +42,12 @@ export const originTraits = {
     'jazz': {
         'name': 'Jazz',
         'desc': "<p>For each active trait (except uniques), your team gains bonus Health and deals bonus damage.<br><br>(2) 1.5% Health, 1% Damage<br>(3) 2.5% Health, 1.5% Damage<br>(4) 4% Health, 2% Damage</p><br>",
-        'champions': ['Bard', 'Miss Fortune', 'Lucian']
+        'champions': ['Bard', 'MissFortune', 'Lucian']
     },
     'kda': {
         'name': 'K/DA',
         'desc': "<p>Your team gains max Health, Ability Power, and Attack Damage if they are in a lighted hex. K/DA champions gain double!<br><br>(3) +9% max Health, +9 AP & AD<br>(5) +15% max Health, +15 AP & AD<br>(7) +27% max Health, +27 AP & AD<br>(10) +45% max Health, +45 AP & AD, 10 mana per second</p><br>",
-        'champions': ['Evelynn', 'Lillia', 'Kai\'Sa', 'Seraphine', 'Neeko', 'Ahri', 'Akali_KDA']
+        'champions': ['Evelynn', 'Lillia', 'Kaisa', 'Seraphine', 'Neeko', 'Ahri', 'Akali']
     },
     'maestro': {
         'name': 'Maestro',
@@ -72,7 +72,7 @@ export const originTraits = {
     'true damage': {
         'name': 'True Damage',
         'desc': "<p>True Damage champions deal bonus true damage. If they are holding an item, they gain a unique Bling Bonus for their Ability.<br><br>(2) 15% damage<br>(4) 30% damage<br>(6) 45% damage<br>(9) 99% damage, Bling Bonuses go Platinum!</p><br>",
-        'champions': ['Kennen', 'Yasuo', 'Senna', 'Ekko', 'Akali_TD', 'Qiyana']
+        'champions': ['Kennen', 'Yasuo', 'Senna', 'Ekko', 'Akali_TrueDamage', 'Qiyana']
     },
     'wildcard': {
         'name': 'Wildcard',
@@ -85,17 +85,17 @@ export const classTraits = {
     'big shot': {
         'name': 'Big Shot',
         'desc': "<p>Big Shots gain Attack Damage. which increases for 3 seconds when they use their Ability.<br><br>(2) 10% Attack Damage, 40% after casting<br>(4) 20% Attack Damage, 60% after casting<br>(6) 40% Attack Damage, 100% after casting</p><br>",
-        'champions': ['Corki', 'Kai\'Sa', 'Miss Fortune', 'Ezreal', 'Jhin']
+        'champions': ['Corki', 'Kaisa', 'MissFortune', 'Ezreal', 'Jhin']
     },
     'breakout': {
         'name': 'Breakout',
         'desc': "<p>(1) Akali is a member of K/DA or True Damage depending on which trait has more fielded champions. She gains a different Ability depending on which form she takes.<p><br>",
-        'champions': ['Akali_KDA', 'Akali_TD']
+        'champions': ['Akali', 'Akali_TrueDamage']
     },
     'bruiser': {
         'name': 'Bruiser',
         'desc': "<p>Your team gains 100 Health. Bruiser gain bonus maximum Health.<br><br>(2) 20% max Health<br>(4) 45% max Health<br>(6) 90% max Health</p><br>",
-        'champions': ['Olaf', 'Tahm Kench', 'Gragas', 'Sett', 'Zac', 'Illaoi']
+        'champions': ['Olaf', 'TahmKench', 'Gragas', 'Sett', 'Zac', 'Illaoi']
     },
     'crowd diver': {
         'name': 'Crowd Diver',
@@ -105,7 +105,7 @@ export const classTraits = {
     'dazzler': {
         'name': 'Dazzler',
         'desc': "<p>Dazzler' Ability reduce their target's damage by 10% and deal bonus magic damage over 2 seconds.<br><br>(2) 20% magic damage<br>(4) 60% magic damage<br>(6) 100% magic damage</p><br>",
-        'champions': ['Nami', 'Bard', 'Lux', 'Twisted Fate', 'Ziggs']
+        'champions': ['Nami', 'Bard', 'Lux', 'TwistedFate', 'Ziggs']
     },
     'edgelord': {
         'name': 'Edgelord',
@@ -115,7 +115,7 @@ export const classTraits = {
     'executioner': {
         'name': 'Executioner',
         'desc': "<p>Executioner Abilities can critically strike and they gain Critical Strike Damage. Their Critical Strike Chance is increased based on their target\'s missing Health.<br><br>(2) 5% Crit Damage, Up to 25% Crit Chance<br>(4) 15% Crit Damage, Up to 80% Crit Chance<br>(6) 30% Crit Damage, Up to 160% Crit Chance</p><br>",
-        'champions': ['Twitch', 'Samira', 'Vex', 'Akali_KDA', 'Akali_TD', 'Karthus']
+        'champions': ['Twitch', 'Samira', 'Vex', 'Akali', 'Akali_TrueDamage', 'Karthus']
     },
     'guardian': {
         'name': 'Guardian',
@@ -135,7 +135,7 @@ export const classTraits = {
     'sentinel': {
         'name': 'Sentinel',
         'desc': "<p>Your team gains Armor and Magic Resist. Sentinels gain double.<br><br>(2) +16 Armor, +16 Magic Resist<br>(4) +35 Armor, +35 Magic Resist<br>(6) +55 Armor, +55 Magic Resist<br>(8) +100 Armor, +100 Magic Resist</p><br>",
-        'champions': ['K\'Sante', 'Lillia', 'Garen', 'Ekko', 'Mordekaiser', 'Blitzcrank']
+        'champions': ['KSante', 'Lillia', 'Garen', 'Ekko', 'Mordekaiser', 'Blitzcrank']
     },
     'spellweaver': {
         'name': 'Spellweaver',
@@ -161,14 +161,14 @@ export function createTraits(traitObject) {
     traitsDiv.appendChild(typeTraitDiv);
     
     for (let currentTrait in traitObject) {
-        
         const currentTraitDiv = document.createElement('div');
         const traitImgDiv = document.createElement('div');
         const traitImg = document.createElement('img');
         const traitNameDiv = document.createElement('div');
         const traitName = document.createElement('h2');
         const traitDesc = document.createElement('div');
-        
+        const championsDiv = document.createElement('div');
+        championsDiv.id = 'traits-champs'
 
         currentTraitDiv.id = currentTrait;
     
@@ -185,6 +185,11 @@ export function createTraits(traitObject) {
         traitDesc.id = 'traitDesc';
         traitDesc.innerHTML = traitObject[currentTrait]['desc'];
         currentTraitDiv.appendChild(traitDesc);
+        
+        const champSplashDiv = populateTraitChampions(traitObject[currentTrait]['champions']);
+        championsDiv.appendChild(champSplashDiv);
+        currentTraitDiv.appendChild(championsDiv);
+
 
         typeTraitDiv.appendChild(currentTraitDiv);
     }
@@ -199,6 +204,17 @@ function typeTrait(traitObject) {
     }
 }
 
-function populateTraitChampions() {
-    
+function populateTraitChampions(champions) {
+    const traitChampsDiv = document.createElement('div');
+    for (let champ of champions) {
+        const squareSplashDiv = document.createElement('div');
+        const squareSplash = document.createElement('img');
+        squareSplashDiv.classList = 'square-splash';
+        
+        squareSplash.src = `./assets/images/splashes-square/${champ}.jpg`
+
+        squareSplashDiv.appendChild(squareSplash);
+        traitChampsDiv.appendChild(squareSplashDiv);
+    }
+    return traitChampsDiv;
 }

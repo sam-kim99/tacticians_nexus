@@ -165,15 +165,14 @@ function fetchTraits(traits) {
 function fetchUnits(units) {
     const allUnits = document.createElement('div');
     for (let unit of units) {
-        const unitItem = document.createElement('div');
         const unitIcon = document.createElement('div');
+        unitIcon.classList = 'square-splash';
         const unitName = unit['character_id'].slice(6);
         const unitImg = document.createElement('img');
         
         unitImg.src = `./assets/images/splashes-square/${unitName}.jpg`
         unitIcon.appendChild(unitImg);
-        unitItem.appendChild(unitIcon);
-        allUnits.appendChild(unitItem);
+        allUnits.appendChild(unitIcon);
     }
     return allUnits;
 }
