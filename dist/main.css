@@ -8,7 +8,7 @@ h1 {
 }
 
 body {
-  background-color: #2d2d30;
+  background-color: #181a1f;
   color: white;
 }
 
@@ -49,4 +49,12 @@ a img {
 
 .banner > img {
   width: 1000px;
+}
+
+#tac-icon > img {
+  height: 64px;
+}
+
+#final-board > div > div > div > img {
+  height: 64px;
 }
