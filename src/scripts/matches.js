@@ -95,7 +95,7 @@ function buildMatch(player) {
     const matchDiv = document.createElement('div');
     matchDiv.classList = 'match';
     const matchInfoDiv = document.createElement('div');
-    matchDiv.classList = 'match-info';
+    matchInfoDiv.classList = 'match-info';
     const tactitianIconDiv = document.createElement('div');
     tactitianIconDiv.id = 'tac-icon';
     const placeFinishedDiv = document.createElement('div');
@@ -106,6 +106,8 @@ function buildMatch(player) {
     traitsFinishedDiv.id = 'active-traits';
     const unitsFinishedDiv = document.createElement('div');
     unitsFinishedDiv.id = 'final-board';
+    const matchContainer = document.createElement('div');
+    matchContainer.classList = 'match-container';
 
     // Get Tactitian Icon
     const tactitianIcon = document.createElement('img');
@@ -114,14 +116,15 @@ function buildMatch(player) {
     matchInfoDiv.appendChild(tactitianIconDiv);
 
     // Get Placement Finished
-    const placeFinished = document.createElement('span');
+    const placeFinished = document.createElement('div');
     placeFinished.innerText = player['placement'];
+    placeFinished.id = `placement-${player['placement']}`
     placeFinishedDiv.appendChild(placeFinished);
     matchInfoDiv.appendChild(placeFinishedDiv);
 
     // Get Last Round Played (Stage Finished)
-    const stageFinished = document.createElement('span');
-    stageFinished.innerText = convertLastRound(player['last_round'])
+    const stageFinished = document.createElement('div');
+    stageFinished.innerText = convertLastRound(player['last_round']);
     stageFinishedDiv.appendChild(stageFinished);
     matchInfoDiv.appendChild(stageFinishedDiv);
 
@@ -133,9 +136,11 @@ function buildMatch(player) {
     // Get Units Finished
     const finalUnits = fetchUnits(player['units']);
     unitsFinishedDiv.appendChild(finalUnits);
-    matchInfoDiv.appendChild(unitsFinishedDiv);
-
-    matchDiv.appendChild(matchInfoDiv);
+    // matchInfoDiv.appendChild(unitsFinishedDiv);
+    
+    matchContainer.appendChild(matchInfoDiv);
+    matchContainer.appendChild(unitsFinishedDiv);
+    matchDiv.appendChild(matchContainer);
     matchesDiv.appendChild(matchDiv);
 
 }
@@ -150,7 +155,12 @@ function fetchTraits(traits) {
         if (trait['tier_current'] >= 1) {
         const traitItem = document.createElement('div');
         const traitIcon = document.createElement('div');
+            traitItem.classList = 'match-trait'
             traitItem.id = 'tier-' + trait['tier_current'];
+            traitItem.style.background = `url(./assets/images/traitbg/${trait['tier_current']}.png)`//'url(//cdn.dak.gg/tft/images2/tft/traits/background/bronze.svg)'
+            traitItem.style.backgroundRepeat = 'no-repeat';
+            traitItem.style.backgroundPosition = 'center';
+            traitItem.style.backgroundSize = 'cover';
             traitIcon.id = trait['name'].slice(6);
             // Placeholder
             traitIcon.innerText = trait['name'].slice(6);
@@ -164,9 +174,10 @@ function fetchTraits(traits) {
 
 function fetchUnits(units) {
     const allUnits = document.createElement('div');
+    allUnits.classList = 'all-units'
     for (let unit of units) {
         const unitIcon = document.createElement('div');
-        unitIcon.classList = 'square-splash';
+        unitIcon.classList = 'match-splash';
         const unitName = unit['character_id'].slice(6);
         const unitImg = document.createElement('img');
         
