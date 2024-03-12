@@ -10,42 +10,45 @@
     <link rel="stylesheet" href="./dist/main.css" />
     <script src="./dist/main.js"></script>
     <title>Tactician's Nexus</title>
-</head>
+  </head>
 
-<h1>Tactician's Nexus</h1>
   <body>
-    
-    <div class="banner">
-      <img src="./assets/images/background/background.png">
-    </div>
-    <div class="title">
-      <img src="./assets/images/background/title.png">      
+    <div class="header">
+      <div class="banner">
+        <img src="./assets/images/background/background.png">
+        <div class="title">
+          <div class="title-h1">
+            <h1>Tactician's Nexus</h1>
+          </div>
+          <img src="./assets/images/background/title.png">
+        </div>
+        <div class="match-fetcher">
+          <h2>TFT Match History</h2>
+          
+          <form id="search">
+            <label>Get match history by Riot ID:
+              <br />
+              <input id="search-riot-id" type="text" placeholder="Search Player (player#TAG)" required />
+            </label>
+            <input type="submit" value="Search" />
+          </form>
+          
+        </div>
+      </div>
     </div>
     <br>
-    <section class="match-fetcher">
-      <h2>TFT Match History</h2>
-    
-      <form id="search">
-        <label>Get match history by Riot ID:
-          <br />
-          <input id="search-riot-id" type="text" placeholder="Search Player (player#TAG)" required />
-        </label>
-        <input type="submit" value="Search" />
-      </form>
-
-      <div class="matches">
+    <div class="matches">
 
 
-      </div>
+    </div>
   
-    </section>
     <br>
     <div class="traits">
         
     </div>
     <br>
     <div class="champions">
-        
+          
     </div>
   </body>
 
