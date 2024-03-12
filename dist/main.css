@@ -237,3 +237,8 @@ input[type=submit]:hover {
   border: 2px solid rgb(187, 187, 187);
   background: rgba(187, 187, 187, 0.1);
 }
+
+.match-trait > img {
+  width: 22px;
+  filter: invert(100%);
+}

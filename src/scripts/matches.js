@@ -129,7 +129,7 @@ function buildMatch(player) {
     matchInfoDiv.appendChild(stageFinishedDiv);
 
     // Get Active Traits
-    const activeTraits = fetchTraits(player['traits'])
+    const activeTraits = fetchTraits(player['traits'].sort((a, b) => b.style - a.style));
     traitsFinishedDiv.appendChild(activeTraits);
     matchInfoDiv.appendChild(traitsFinishedDiv);
 
@@ -150,22 +150,28 @@ function convertLastRound(lastRound) {
 }
 
 function fetchTraits(traits) {
+    console.log(traits);
     const allTraits = document.createElement('div');
     for (let trait of traits) {
         if (trait['tier_current'] >= 1) {
-        const traitItem = document.createElement('div');
-        const traitIcon = document.createElement('div');
+            const traitItem = document.createElement('div');
+
+            const traitImg = document.createElement('img')
             traitItem.classList = 'match-trait'
             traitItem.id = 'tier-' + trait['tier_current'];
-            traitItem.style.background = `url(./assets/images/traitbg/${trait['tier_current']}.png)`//'url(//cdn.dak.gg/tft/images2/tft/traits/background/bronze.svg)'
+            if (trait['style'] === 5) {
+                traitItem.style.background = `url(./assets/images/traitbg/unique.png)`
+            } else {
+                traitItem.style.background = `url(./assets/images/traitbg/${trait['tier_current']}.png)`
+            }
             traitItem.style.backgroundRepeat = 'no-repeat';
             traitItem.style.backgroundPosition = 'center';
             traitItem.style.backgroundSize = 'cover';
-            traitIcon.id = trait['name'].slice(6);
-            // Placeholder
-            traitIcon.innerText = trait['name'].slice(6);
-            //
-            traitItem.appendChild(traitIcon);
+
+
+            traitImg.src = './assets/images/trait-icons/' + trait['name'].slice(6).toLowerCase() + '.png';
+
+            traitItem.appendChild(traitImg);
             allTraits.appendChild(traitItem);
         }
     }
