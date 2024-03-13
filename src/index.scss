@@ -39,14 +39,6 @@ form {
     padding: 20px;
     border-radius: 8px;
     gap: 8px;
-    // box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-label {
-    display: block;
-    font-weight: bold;
-    color: #ffffff;
-    // font-family: 'TheBold, TheBold';
 }
 
 input[type="submit"] {
@@ -57,7 +49,6 @@ input[type="submit"] {
     display: inline-flex;
     flex-shrink: 0;
     padding: 12px;
-    // width: 15%;
     padding: 8px;
     background-color: #007bff;
     color: #fff;
@@ -87,7 +78,6 @@ input[type="submit"]:hover {
     justify-content: center;
     align-items: center;
     background-repeat: no-repeat;
-    // overflow: hidden;
 }
 
 .banner > img {
@@ -113,7 +103,6 @@ input[type="submit"]:hover {
     color: white;
     font-size: 60px;
     font-family: 'TheBold, TheBold';
-    // font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 #tac-icon > img {
@@ -163,7 +152,6 @@ input[type="submit"]:hover {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    // margin: 0 auto;
     border-radius: 8px;
     height: 50px;
 }
