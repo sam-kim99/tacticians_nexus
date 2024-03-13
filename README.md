@@ -51,5 +51,6 @@ This project implements the following technologies:
 
 * Add team builder functionality that utilizes a drag and drop to allow users to create own variations of a team composition.
 * Use same API to incorporate Augment statistics, showing which augments are favorable in current meta.
+* Show video of champion's ability when hovered
 * Interact with a carousel that cycles through all the new background sounds that will be introduced in Set 10: Remix Rumble.
 * Hover over items in the Grid of Items to see a brief description
