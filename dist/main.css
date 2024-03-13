@@ -40,12 +40,6 @@ form {
   gap: 8px;
 }
 
-label {
-  display: block;
-  font-weight: bold;
-  color: #ffffff;
-}
-
 input[type=submit] {
   align-items: center;
   background-color: #2d2f37;
@@ -248,6 +242,7 @@ input[type=submit]:hover {
   margin: 0 auto;
   max-width: 100%;
   padding: 0 20px;
+  margin-bottom: 30px;
 }
 
 .traits > div, .champions > div {
@@ -363,6 +358,7 @@ input[type=submit]:hover {
   margin-top: 24px;
   font-family: "Pretendard, Thin";
   font-size: 30px;
+  margin-bottom: 20px;
 }
 
 .champion-img > a > img:hover, .square-splash > a > img:hover,
