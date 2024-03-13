@@ -1,6 +1,6 @@
 # Tactician's Nexus
 
-[Teamfight Tactics](https://teamfighttactics.leagueoflegends.com/en-us/) (TFT) ) is an auto-battler free-for-all game renowned for its depth of strategy. As a tactician, your role is pivotal in assembling a formidable team amidst the unpredictability of chance. Utilizing your gold, you strategically acquire champions, craft items, and tactically position your formidable roster on the board to engage other tacticians in fierce battles.
+[Teamfight Tactics](https://teamfighttactics.leagueoflegends.com/en-us/) (TFT) is an auto-battler free-for-all game renowned for its depth of strategy. As a tactician, your role is pivotal in assembling a formidable team amidst the unpredictability of chance. Utilizing your gold, you strategically acquire champions, craft items, and tactically position your formidable roster on the board to engage other tacticians in fierce battles.
 
 What distinguishes TFT, beyond its vibrant artwork and engaging gameplay, is its dynamic rotation of "Sets." Every four months, a new "Set" is introduced, showcasing fresh champions, traits, and mechanics. This perpetual evolution ensures the game remains dynamic and captivating. With each new set, players must adapt their strategies to the evolving meta, fostering a continuous cycle of innovation and challenge.
 
@@ -18,10 +18,10 @@ Yet, as each new set emerges, it also bids farewell to the past, potentially ove
 
 ### In Tactician's Nexus, users are able to:
 
-* Interact with a carousel that cycles through all the new background sounds that will be introduced in Set 10: Remix Rumble.
+* Ability to look up any player's last ten matches using a Riot ID and their proper tag
 * Use the fixed nav-bar to quickly move around the page to their desired location to learn about new features of the Set.
-* Click on any Champion from any grid to learn more about their abilities, mana cost, and traits
-* Hover over items in the Grid of Items to see a brief description
+* Click on any Champion to learn more about their abilities, mana cost, and traits
+
 
 ### In addition, this project includes:
 
@@ -30,6 +30,7 @@ Yet, as each new set emerges, it also bids farewell to the past, potentially ove
 ## Technologies, Libraries, APIs:
 This project implements the following technologies:
 
+* The Riot Games API for TFT to fetch PUUIDs and Player Matches: https://developer.riotgames.com/apis .
 * The Riot Games Data Dragon API for TFT: https://developer.riotgames.com/docs/tft#data-dragon_versions .
 * Webpack to bundle and transpile source JavaScript code.
 * npm to manage project dependencies
@@ -50,3 +51,5 @@ This project implements the following technologies:
 
 * Add team builder functionality that utilizes a drag and drop to allow users to create own variations of a team composition.
 * Use same API to incorporate Augment statistics, showing which augments are favorable in current meta.
+* Interact with a carousel that cycles through all the new background sounds that will be introduced in Set 10: Remix Rumble.
+* Hover over items in the Grid of Items to see a brief description
