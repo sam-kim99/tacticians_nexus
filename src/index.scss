@@ -120,7 +120,7 @@ input[type="submit"]:hover {
     height: 64px;
 }
 
-.square-splash > img {
+.square-splash > a > img {
     height: 36px;
     border: 2px solid rgb(223, 215, 215);
     border-radius: 8px;
@@ -376,4 +376,17 @@ input[type="submit"]:hover {
     margin-top: 24px;
     font-family: 'Pretendard, Thin';
     font-size: 30px;
+}
+
+.champion-img > a > img:hover, .square-splash > a > img:hover {
+    animation: glow 1s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        filter: drop-shadow(0 0 5px #fff);
+    }
+    to {
+        filter: drop-shadow(0 0 20px #007bff);
+    }
 }

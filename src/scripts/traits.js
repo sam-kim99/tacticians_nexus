@@ -218,12 +218,20 @@ function populateTraitChampions(champions) {
     const traitChampsDiv = document.createElement('div');
     for (let champ of champions) {
         const squareSplashDiv = document.createElement('div');
+        const squareSplashLink = document.createElement('a');
         const squareSplash = document.createElement('img');
         squareSplashDiv.classList = 'square-splash';
+        squareSplashLink.target = '_blank'; // Opens in new tab
+        if (champ.includes('TrueDamage')) {
+            squareSplashLink.href = 'https://mobalytics.gg/tft/champions/akali-true-damage'    
+        } else {
+            squareSplashLink.href = 'https://mobalytics.gg/tft/champions/' + `${champ.split(' ').join('').toLowerCase()}`
+        }
         
         squareSplash.src = `./assets/images/splashes-square/${champ}.jpg`
 
-        squareSplashDiv.appendChild(squareSplash);
+        squareSplashLink.appendChild(squareSplash)
+        squareSplashDiv.appendChild(squareSplashLink);
         traitChampsDiv.appendChild(squareSplashDiv);
     }
     return traitChampsDiv;
