@@ -378,7 +378,8 @@ input[type="submit"]:hover {
     font-size: 30px;
 }
 
-.champion-img > a > img:hover, .square-splash > a > img:hover {
+.champion-img > a > img:hover, .square-splash > a > img:hover,
+.links > a > img:hover {
     animation: glow 1s infinite alternate;
 }
 
@@ -389,4 +390,54 @@ input[type="submit"]:hover {
     to {
         filter: drop-shadow(0 0 20px #007bff);
     }
+}
+
+
+.sticky-navbar {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+    top: 30px; 
+    right: 30px; 
+    background-color: #333;
+    padding: 10px 20px; 
+    border-radius: 5px;
+    z-index: 1000;
+    height: 150px;
+}
+
+.sticky-navbar > a {
+    margin-top: 5px;
+    border: 2px solid #555; 
+    border-radius: 5px; 
+    padding: 5px; 
+    width: 100%;
+    background-color: rgb(77, 77, 77);
+    text-align: center;
+}
+
+.sticky-navbar a {
+    color: #fff; 
+    text-decoration: none;
+    margin-top: 5px;
+    font-family: 'Pretendard, Thin';
+    font-size: 16px;
+}
+
+.sticky-navbar a:hover {
+    animation: glow 1s infinite alternate;
+}
+
+.links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.links > a > img {
+    width: 24px;
 }
