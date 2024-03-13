@@ -1,15 +1,21 @@
 /*!*************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
   \*************************************************************************************************************************************/
+@font-face {
+  font-family: "Trajan, Trajan";
+  src: url("../assets/fonts/TrajanPro-Bold.otf") format("opentype");
+}
+@font-face {
+  font-family: "Pretendard, Thin";
+  src: url("../assets/fonts/Pretendard-Light.otf") format("opentype");
+}
+@font-face {
+  font-family: "TheBold, TheBold";
+  src: url("../assets/fonts/theboldfont.ttf");
+}
 body {
   background-color: #181a1f;
   color: white;
-}
-
-h2 {
-  color: white;
-  font-size: 20px;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
 .match-fetcher {
@@ -23,39 +29,45 @@ h2 {
 }
 
 form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   margin: 0 auto;
-  background-color: #fff;
+  margin-top: 15%;
+  background-color: transparent;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  gap: 8px;
 }
 
 label {
   display: block;
-  margin-bottom: 10px;
   font-weight: bold;
-  color: #555;
+  color: #ffffff;
 }
 
 input[type=submit] {
-  width: 100%;
+  align-items: center;
+  background-color: #2d2f37;
+  border: 0;
+  cursor: pointer;
+  display: inline-flex;
+  flex-shrink: 0;
+  padding: 12px;
   padding: 8px;
   background-color: #007bff;
-  color: #fff;
-  border: none;
+  border: 1px solid #ccc;
   border-radius: 4px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
-input[type=text],
-input[type=submit] {
-  width: 100%;
-  padding: 8px; /* Adjust as needed */
+input[type=text] {
+  width: 402px;
+  padding: 8px;
   border: 1px solid #ccc;
   border-radius: 4px;
   outline: none;
-  box-sizing: border-box; /* Include padding and border in the width calculation */
+  box-sizing: border-box;
 }
 
 input[type=submit]:hover {
@@ -76,9 +88,9 @@ input[type=submit]:hover {
 }
 
 .title {
-  padding-top: 5%;
+  padding-top: 15%;
   position: absolute;
-  top: 23%;
+  top: 25%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
@@ -92,7 +104,7 @@ input[type=submit]:hover {
   text-align: center;
   color: white;
   font-size: 60px;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: "TheBold, TheBold";
 }
 
 #tac-icon > img {
@@ -100,7 +112,9 @@ input[type=submit]:hover {
 }
 
 .square-splash > img {
-  height: 64px;
+  height: 36px;
+  border: 2px solid rgb(223, 215, 215);
+  border-radius: 8px;
 }
 
 .match-splash > img {
@@ -122,13 +136,8 @@ input[type=submit]:hover {
 .match-container, #final-board > div {
   display: flex;
   width: 100%;
-  flex: 1;
   align-items: center;
   justify-content: space-between;
-}
-
-#final-board {
-  justify-content: end;
 }
 
 .match-info {
@@ -143,6 +152,7 @@ input[type=submit]:hover {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border-radius: 8px;
   height: 50px;
 }
 
@@ -168,7 +178,7 @@ input[type=submit]:hover {
 }
 
 #final-placement {
-  width: 32px;
+  width: 48px;
 }
 
 #final-stage > div {
@@ -188,57 +198,168 @@ input[type=submit]:hover {
 }
 
 #placement-1 {
-  font-size: 25px;
-  width: 32px;
-  height: 32px;
+  font-family: "Roboto", sans-serif;
+  font-size: 30px;
+  width: 38px;
+  height: 38px;
   border-radius: 6px;
-  color: rgb(241, 197, 85);
-  border: 2px solid rgb(241, 197, 85);
-  background: rgba(241, 197, 85, 0.1);
+  color: rgb(255, 215, 0);
+  border: 2px solid rgb(218, 165, 32);
+  background: rgba(255, 215, 0, 0.1);
 }
 
-#placement-2 {
-  font-size: 25px;
-  width: 32px;
-  height: 32px;
-  border-radius: 6px;
-  color: rgb(220, 56, 195);
-  border: 2px solid rgb(220, 56, 195);
-  background: rgba(220, 56, 195, 0.1);
-}
-
-#placement-3 {
-  font-size: 25px;
-  width: 32px;
-  height: 32px;
-  border-radius: 6px;
-  color: rgb(110, 204, 255);
-  border: 2px solid rgb(110, 204, 255);
-  background: rgba(110, 204, 255, 0.1);
-}
-
+#placement-2, #placement-3,
 #placement-4 {
-  font-size: 25px;
-  width: 32px;
-  height: 32px;
+  font-family: "Roboto", sans-serif;
+  font-size: 30px;
+  width: 38px;
+  height: 38px;
   border-radius: 6px;
-  color: rgb(55, 212, 136);
-  border: 2px solid rgb(55, 212, 136);
-  background: rgba(55, 212, 136, 0.1);
+  color: rgb(192, 192, 192);
+  border: 2px solid rgb(169, 169, 169);
+  background: rgba(192, 192, 192, 0.1);
 }
 
 #placement-5, #placement-6,
 #placement-7, #placement-8 {
-  font-size: 25px;
-  width: 32px;
-  height: 32px;
+  font-family: "Roboto", sans-serif;
+  font-size: 30px;
+  width: 38px;
+  height: 38px;
   border-radius: 6px;
-  color: rgb(187, 187, 187);
-  border: 2px solid rgb(187, 187, 187);
-  background: rgba(187, 187, 187, 0.1);
+  color: rgb(139, 87, 35);
+  border: 2px solid rgb(109, 69, 27);
+  background: rgba(139, 87, 35, 0.1);
 }
 
 .match-trait > img {
   width: 22px;
   filter: invert(100%);
+}
+
+.traits, .champions {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 0 20px;
+  margin-bottom: 20px;
+}
+
+.traits > div, .champions > div {
+  display: inline-grid;
+  justify-content: center;
+  grid-template-columns: repeat(4, 258px);
+  row-gap: 16px;
+  margin: 0 auto;
+  gap: 10px;
+}
+
+.traits > div > div {
+  background-color: #28292e;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  min-height: 400px;
+  padding: 16px;
+  border-radius: 6px;
+}
+
+.traits-champs > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2%;
+}
+
+#traitDesc {
+  font-family: "Pretendard, Thin";
+  margin-top: 16px;
+  color: #b7bac3 !important;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.trait-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#traitName {
+  font-family: "Pretendard, Thin";
+}
+
+.traits > h2 {
+  font-family: "Pretendard, Thin";
+  font-size: 30px;
+  margin-top: 5%;
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+
+.champion-img > a > img {
+  width: 258px;
+}
+
+.champ-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.trait-cost, .trait-cost:last-child > div {
+  display: flex;
+  align-items: center;
+}
+
+#traits {
+  margin-right: 20px;
+}
+
+#traits > img {
+  width: 20px;
+}
+
+.gold-coin {
+  width: 18px;
+  margin-right: 4px;
+  filter: brightness(0) saturate(100%) invert(92%) sepia(58%) saturate(2719%) hue-rotate(318deg) brightness(94%) contrast(102%);
+}
+
+.champion-img {
+  position: relative;
+}
+
+.champ-info {
+  backdrop-filter: blur(6px);
+  height: 40px;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 16px;
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+  font-weight: 600;
+  font-family: "Pretendard, Thin";
+  transition: all 0.25s ease 0s;
+}
+
+#img {
+  border-radius: 6px;
+}
+
+.champions > h2 {
+  margin-top: 24px;
+  font-family: "Pretendard, Thin";
+  font-size: 30px;
 }

@@ -150,7 +150,6 @@ function convertLastRound(lastRound) {
 }
 
 function fetchTraits(traits) {
-    console.log(traits);
     const allTraits = document.createElement('div');
     for (let trait of traits) {
         if (trait['tier_current'] >= 1) {

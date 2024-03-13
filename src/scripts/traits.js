@@ -162,32 +162,42 @@ export function createTraits(traitObject) {
     
     for (let currentTrait in traitObject) {
         const currentTraitDiv = document.createElement('div');
+        const traitInfoDiv = document.createElement('div');
         const traitImgDiv = document.createElement('div');
         const traitImg = document.createElement('img');
         const traitNameDiv = document.createElement('div');
         const traitName = document.createElement('h2');
         const traitDesc = document.createElement('div');
         const championsDiv = document.createElement('div');
-        championsDiv.id = 'traits-champs'
-
+        const traitHeaderDiv = document.createElement('div');
+        traitHeaderDiv.classList = 'trait-header';
+        const traitContainer = document.createElement('div');
+        traitContainer.classList = 'trait-container';
+        
+        traitInfoDiv.classList = 'trait-desc'
+        championsDiv.classList = 'traits-champs'
         currentTraitDiv.id = currentTrait;
     
         traitImgDiv.id = 'traitImg'
         traitImg.src = './assets/images/trait-icons/' + currentTrait + '.png';
         traitImgDiv.appendChild(traitImg);
-        currentTraitDiv.appendChild(traitImgDiv);
+        traitHeaderDiv.appendChild(traitImgDiv);
 
         traitNameDiv.id = 'traitName';
         traitName.innerText = traitObject[currentTrait]['name'];
         traitNameDiv.appendChild(traitName);
-        currentTraitDiv.appendChild(traitNameDiv);
+        traitHeaderDiv.appendChild(traitNameDiv);
 
         traitDesc.id = 'traitDesc';
         traitDesc.innerHTML = traitObject[currentTrait]['desc'];
-        currentTraitDiv.appendChild(traitDesc);
+        traitInfoDiv.appendChild(traitDesc);
         
         const champSplashDiv = populateTraitChampions(traitObject[currentTrait]['champions']);
         championsDiv.appendChild(champSplashDiv);
+        
+        traitContainer.appendChild(traitHeaderDiv);
+        traitContainer.appendChild(traitInfoDiv);
+        currentTraitDiv.appendChild(traitContainer);
         currentTraitDiv.appendChild(championsDiv);
 
 

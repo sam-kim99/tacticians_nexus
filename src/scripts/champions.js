@@ -38,7 +38,7 @@ function displayChampionInfo(champInfo) {
             const costContainer = createCostContainer(cost);
 
             const containerText = document.createElement('h2');
-            containerText.innerText = `${cost}-cost`;
+            containerText.innerText = `${cost} Cost`;
             champDiv.appendChild(containerText);
 
             champDiv.appendChild(costContainer);
@@ -61,8 +61,14 @@ function createChampionContainer(champObj) {
     const champName = document.createElement('div');
     const champTraits = document.createElement('div');
     const champCost = document.createElement('div');
+    const champImgDiv = document.createElement('div');
+    champImgDiv.classList = 'champion-img';
     const champImgLink = document.createElement('a');
     const champImg = document.createElement('img');
+    const champInfoDiv = document.createElement('div');
+    champInfoDiv.classList = 'champ-info';
+    const traitCostDiv = document.createElement('div');
+    traitCostDiv.classList = 'trait-cost';
 
     // Attach each trait to the champion's div 
     champTraits.id = 'traits';
@@ -99,16 +105,22 @@ function createChampionContainer(champObj) {
     // Set the ID and inner text of champCost to be the champion's cost
     // So that I can manipulate it separately
     champCost.id = `${champObj['cost']}_cost`;
-    champCost.innerText = champObj['cost'];
+    const goldCoin = document.createElement('img');
+    goldCoin.src = './assets/images/gold.png';
+    goldCoin.classList = 'gold-coin'
+    champCost.appendChild(goldCoin);
+    const champCostText = document.createElement('div');
+    champCostText.innerText = champObj['cost'];
+    champCost.appendChild(champCostText)
 
     // Link each champion's image to their own page
     // Edge case in conditional due to the fact that this set has one pair of dupes
-    champImgLink.id = 'splash';
+    champImgLink.classList = 'champ-link';
     champImgLink.target = '_blank'; // Opens in new tab
     if (champObj['apiName'].includes('TrueDamage')) {
         champImgLink.href = 'https://mobalytics.gg/tft/champions/akali-true-damage'    
     } else {
-        champImgLink.href = 'https://mobalytics.gg/tft/champions/' + `${champObj['name'].toLowerCase()}`
+        champImgLink.href = 'https://mobalytics.gg/tft/champions/' + `${champObj['name'].split(' ').join('').toLowerCase()}`
     }
 
     // Link each image source with the champion name from splashes folder
@@ -116,12 +128,16 @@ function createChampionContainer(champObj) {
     champImg.src = './assets/images/splashes/' + `${champName.id}.jpg`;
 
     champImgLink.appendChild(champImg);
-    champContainer.appendChild(champImgLink);
-    champContainer.appendChild(champName);
-    champContainer.appendChild(champTraits);
-    champContainer.appendChild(champCost);
-    champContainer.appendChild(document.createElement('br'));
+    champImgDiv.appendChild(champImgLink);
+    champInfoDiv.appendChild(champName);
+    traitCostDiv.appendChild(champTraits);
+    traitCostDiv.appendChild(champCost);
+    champInfoDiv.appendChild(traitCostDiv);
     
+    // champContainer.appendChild(champImgDiv);
+    champImgDiv.appendChild(champInfoDiv)
+    champContainer.appendChild(champImgDiv);
+
     return champContainer;
 
 }
