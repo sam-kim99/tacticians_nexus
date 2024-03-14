@@ -18,9 +18,11 @@ Yet, as each new set emerges, it also bids farewell to the past, potentially ove
 
 ### In Tactician's Nexus, users are able to:
 
-* Ability to look up any player's last ten matches using a Riot ID and their proper tag
+* Ability to look up any player's last ten matches using their Riot ID and their proper tag
 * Use the fixed nav-bar to quickly move around the page to their desired location to learn about new features of the Set.
-* Click on any Champion to learn more about their abilities, mana cost, and traits
+* Learn about Origin and Class Traits and their different breakpoints
+* Visualize the Champions that belongs to each Trait and learn more about the Champion
+* Navigate the Champion breakdown by cost and click on any Champion to learn more about their abilities, mana cost, and traits
 
 
 ### In addition, this project includes:
@@ -31,7 +33,7 @@ Yet, as each new set emerges, it also bids farewell to the past, potentially ove
 This project implements the following technologies:
 
 * The Riot Games API for TFT to fetch PUUIDs and Player Matches: https://developer.riotgames.com/apis .
-* The Riot Games Data Dragon API for TFT: https://developer.riotgames.com/docs/tft#data-dragon_versions .
+* The Riot Games Data Dragon for TFT Data: https://developer.riotgames.com/docs/tft#data-dragon_versions .
 * Webpack to bundle and transpile source JavaScript code.
 * npm to manage project dependencies
 

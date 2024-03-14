@@ -29,46 +29,100 @@ body {
 }
 
 
-form {
+// form {
+//     display: flex;
+//     align-items: center;
+//     justify-content: space-between;
+//     margin: 0 auto;
+//     margin-top: 15%;
+//     background-color: transparent;
+//     padding: 20px;
+//     border-radius: 8px;
+//     gap: 8px;
+// }
+
+// input[type="submit"] {
+//     align-items: center;
+//     background-color: #2d2f37;
+//     border: 0;
+//     cursor: pointer;
+//     display: inline-flex;
+//     flex-shrink: 0;
+//     padding: 12px;
+//     padding: 8px;
+//     background-color: #007bff;
+//     color: #fff;
+//     border: 1px solid #ccc;
+//     border-radius: 4px;
+//     cursor: pointer;
+//     transition: background-color 0.3s ease;
+// }
+
+// input[type="text"] {
+//     width: 402px;
+//     padding: 8px;
+//     border: 1px solid #ccc;
+//     border-radius: 4px;
+//     outline: none;
+//     box-sizing: border-box;
+// }
+
+// input[type="submit"]:hover {
+//     background-color: #0056b3;
+// }
+
+#search {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+  
+#search > label {
+    width: 100%;
+}
+
+#search-riot-id {
+    width: 100%;
+    border: 3px solid #00B4CC;
+    border-right: none;
+    padding: 5px;
+    height: 20px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    color: #9DBFAF;
+}
+
+#search-riot-id:focus{
+    color: #00B4CC;
+}
+
+#search-button {
+    width: 40px;
+    height: 36px;
+    border: 1px solid #00B4CC;
+    background: #00B4CC;
+    text-align: center;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 20px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    margin: 0 auto;
-    margin-top: 15%;
-    background-color: transparent;
-    padding: 20px;
-    border-radius: 8px;
-    gap: 8px;
+    justify-content: center;
 }
 
-input[type="submit"] {
-    align-items: center;
-    background-color: #2d2f37;
-    border: 0;
-    cursor: pointer;
-    display: inline-flex;
-    flex-shrink: 0;
-    padding: 12px;
-    padding: 8px;
-    background-color: #007bff;
-    color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+#search-button > img {
+    width: 40px;
 }
 
-input[type="text"] {
-    width: 402px;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    outline: none;
-    box-sizing: border-box;
-}
-
-input[type="submit"]:hover {
-    background-color: #0056b3;
+/*Resize the wrap to see the search bar change!*/
+.match-fetcher{
+    width: 500px;
+    position: absolute;
+    top: 110%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 
