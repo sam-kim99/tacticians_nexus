@@ -9,6 +9,11 @@
 }
 
 @font-face {
+    font-family: 'Pretendard, Thick';
+    src: url('../assets/fonts/Pretendard-SemiBold.otf') format('opentype');
+}
+
+@font-face {
     font-family: 'TheBold, TheBold';
     src: url('../assets/fonts/theboldfont.ttf');
 }
@@ -28,49 +33,6 @@ body {
     color: white;
 }
 
-
-// form {
-//     display: flex;
-//     align-items: center;
-//     justify-content: space-between;
-//     margin: 0 auto;
-//     margin-top: 15%;
-//     background-color: transparent;
-//     padding: 20px;
-//     border-radius: 8px;
-//     gap: 8px;
-// }
-
-// input[type="submit"] {
-//     align-items: center;
-//     background-color: #2d2f37;
-//     border: 0;
-//     cursor: pointer;
-//     display: inline-flex;
-//     flex-shrink: 0;
-//     padding: 12px;
-//     padding: 8px;
-//     background-color: #007bff;
-//     color: #fff;
-//     border: 1px solid #ccc;
-//     border-radius: 4px;
-//     cursor: pointer;
-//     transition: background-color 0.3s ease;
-// }
-
-// input[type="text"] {
-//     width: 402px;
-//     padding: 8px;
-//     border: 1px solid #ccc;
-//     border-radius: 4px;
-//     outline: none;
-//     box-sizing: border-box;
-// }
-
-// input[type="submit"]:hover {
-//     background-color: #0056b3;
-// }
-
 #search {
     width: 100%;
     position: relative;
@@ -84,6 +46,8 @@ body {
 
 #search-riot-id {
     width: 100%;
+    font-family: 'Pretendard, Thin';
+    font-size: 16px;
     border: 3px solid #00B4CC;
     border-right: none;
     padding: 5px;
@@ -114,9 +78,9 @@ body {
 
 #search-button > img {
     width: 40px;
+    filter: invert(100%);
 }
 
-/*Resize the wrap to see the search bar change!*/
 .match-fetcher{
     width: 500px;
     position: absolute;
@@ -124,7 +88,6 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
 }
-
 
 .banner {
     position: relative;
@@ -155,8 +118,8 @@ body {
 .title > h1 {
     text-align: center;
     color: white;
-    font-size: 60px;
-    font-family: 'TheBold, TheBold';
+    font-size: 80px;
+    font-family: 'Pretendard, Thick';
 }
 
 #tac-icon > img {
@@ -236,7 +199,8 @@ body {
 }
 
 #final-stage > div {
-    font-family: 'Roboto', sans-serif;
+    // font-family: 'Roboto', sans-serif;
+    font-family: 'Pretendard, Thick';
     font-size: 25px;
     line-height: 1.6;
     color: #a6e2ec; 
@@ -252,7 +216,7 @@ body {
 }
 
 #placement-1 {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Pretendard, Thick';
     font-size: 30px;
     width: 38px;
     height: 38px;
@@ -264,7 +228,7 @@ body {
 
 #placement-2, #placement-3, 
 #placement-4 {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Pretendard, Thick';
     font-size: 30px;
     width: 38px;
     height: 38px;
@@ -276,7 +240,7 @@ body {
 
 #placement-5, #placement-6,
 #placement-7, #placement-8 {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Pretendard, Thick';
     font-size: 30px;
     width: 38px;
     height: 38px;
@@ -470,7 +434,7 @@ body {
     font-size: 16px;
 }
 
-.sticky-navbar a:hover {
+.sticky-navbar a:hover, .instructions > img:hover {
     animation: glow 1s infinite alternate;
 }
 
@@ -482,6 +446,46 @@ body {
     width: 100%;
 }
 
-.links > a > img {
+.links > a > img, .instructions > img {
     width: 24px;
+}
+
+.instructions {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 133px;
+    // display: none;
+}
+
+.dropdown-desc {
+    position: absolute;
+    background-color: #333;
+    padding: 10px;
+    // border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    width: 200px;
+    top: calc(100% + 15px); 
+    left: -75px;
+    transform: translateX(-50%);
+    word-wrap: break-word;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    font-family: 'Pretendard, Thin';
+    font-size: 16px;
+    text-align: center;
+}
+
+
+.instructions:hover .dropdown-desc {
+    opacity: 1;
+    pointer-events: auto;
 }
