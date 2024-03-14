@@ -27,10 +27,4 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    const imageContainer = document.querySelector(".dropdown");
-    imageContainer.addEventListener("mouseleave", function() {
-        const dropdown = this.querySelector(".dropdown-desc");
-        dropdown.style.display = "none";
-    });
-
 });
